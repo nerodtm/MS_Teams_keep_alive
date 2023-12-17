@@ -1,3 +1,15 @@
+# Rainbow colors for text
+$colors = "Red", "Yellow", "Green", "Cyan", "Blue", "Magenta"
+$text = "Made By nerodtm"
+
+# Loop through the text and apply rainbow colors
+for ($i = 0; $i -lt $text.Length; $i++) {
+    $color = $colors[$i % $colors.Length]
+    $char = $text[$i]
+    Write-Host -NoNewline -ForegroundColor $color $char
+}
+Write-Host
+
 clear host
 #
 # Script to keep the PC alive, will prevent screen lock and sleep.
